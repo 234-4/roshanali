@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="description" content="Roshan Ali - Graphic Designer and Front-end Developer Portfolio Website. Check out creative designs, services, and contact info.">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfolio Website</title>
     <link rel="stylesheet" href="styles.css">
@@ -15,17 +16,35 @@
             color: #333;
         }
         header {
-            background: #dbdf1c;
-            color: #b88383;
-            padding: 1rem;
-            text-align: center;
+        display: flex;
+        justify-content: center;
+        background: #dbdf1c;
+        color: #111;
+        height: 70px;
+
         }
+
+        .banner {
+  width: 100%;
+  height: auto;
+  overflow: hidden;
+}
+
+.banner img {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+}
+
+    
+        
         nav ul {
             list-style: none;
             padding: 0;
         }
         nav ul li {
-            display: inline;
+            display: inline-block;
             margin: 0 15px;
         }
         nav ul li a, #theme-toggle {
@@ -35,19 +54,16 @@
             background: none;
             border: none;
             font-size: 1rem;
-        }
-        section {
-            padding: 2rem;
-            text-align: center;
+
+         }
+
+
+           
+        .portfolio-grid {
+          gap: 30px;
+         }
 
         
-        }
-        .portfolio-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 120px;
-            padding: 0;
-        }
         form input, form textarea, form button {
             display: block;
             width: 100%;
@@ -58,6 +74,11 @@
             background-color: #222;
             color: #fff;
         }
+
+        html {
+         scroll-behavior: smooth;
+         }
+
     </style>
 </head>
 <body>
@@ -77,7 +98,11 @@
     <section id="home">
         <h1>ROSHAN ALI</h1>
         <p>Creative Graphic Designer | UI/UX Enthusiast</p>
-        <img src="graphic-design-services.png" alt="banner">
+        <div class="banner">
+            <img src="graphic-design-services.png" alt="Banner Image" />
+          </div>
+          
+        
         
     </section>
     
@@ -85,9 +110,9 @@
         <h2>Portfolio</h2>
         <div class="portfolio-grid">
             <!-- Portfolio items will go here -->
-            <img src="logo.png" alt="logo">
+            <img src="logo.png" alt="creative logo design">
             <img src="pakaging.jpg"alt="pakaging">
-            <img src="brand.jpg" alt="brand"
+            <img src="brand.jpg" alt="brand">
             
         </div>
     </section>
@@ -116,6 +141,8 @@
     
 
         <form>
+            <form action="#" method="post">
+
             <div class="input-group">
                 <input type="text" placeholder="Your Name" required>
                 <input type="email" placeholder="Your Email" required>
@@ -237,12 +264,12 @@
 
 </style>
 
-    <script>
-        document.getElementById('theme-toggle').addEventListener('click', function() {
-            document.body.classList.toggle('dark-mode');
-        });
-    </script>
-</body>
+...
+<script>
+    document.getElementById('theme-toggle').addEventListener('click', function() {
+        document.body.classList.toggle('dark-mode');
+    });
+</script>
 
 <footer>
     <p>&copy; 2025 Roshan Ali. All rights reserved.</p>
